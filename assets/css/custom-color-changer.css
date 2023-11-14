@@ -1,0 +1,92 @@
+/* Add your custom styles for DataTables here */
+#title-color-changer-table {
+  /* Your custom styles */
+  margin-bottom: 20px;
+}
+
+#colorChangerTable {
+  /* Your custom styles */
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+#colorChangerTable_filter input {
+  margin-bottom: 20px;
+  background-color: #fff !important;
+  /* Adjust the margin-bottom as needed */
+}
+
+/* Customize DataTables pagination */
+#colorChangerTable_paginate {
+  /* Your custom styles */
+  margin-top: 10px;
+}
+
+#colorChangerTable_info {
+  margin-top: 10px;
+  /* Adjust the margin-top as needed */
+}
+
+/* Fix overlapping issue in "Show X entries" dropdown */
+
+#colorChangerTable_length label::after {
+  content: "\25BC";
+  /* Unicode character for down arrow */
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 5px;
+  /* Adjust as needed */
+  font-size: 0.8em;
+  /* Adjust as needed */
+}
+
+#colorChangerTable_length select {
+  width: 80px;
+  background-color: #fff !important;
+  /* Adjust the width as needed */
+}
+
+#color-circle {
+  display: inline-block;
+  width: 40px;
+  /* Adjust the width and height as needed */
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+  /* Adjust spacing between circles */
+  position: relative;
+}
+
+#circle-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-weight: bold;
+  /* Set text color */
+}
+
+.category-label {
+  display: flex;
+  margin-bottom: 5px;
+  /* Adjust spacing between category labels and color circles */
+  font-weight: bold;
+  /* Optionally set font-weight */
+}
+
+.label-value {
+  padding: 5px 10px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background-color: #343a40;
+  /* Adjust background color */
+  color: white;
+  /* Set text color */
+  border-radius: 20px;
+  /* Adjust border radius for pill shape */
+  font-weight: bold;
+  /* Optionally set font-weight */
+}
