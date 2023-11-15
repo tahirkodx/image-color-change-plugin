@@ -14,14 +14,13 @@ function custom_color_changer_page()
         <label for="category_ids">Select Product Categories:</label>
         <select name="category_ids[]" id="category_ids" multiple class="select2">
             <?php
-            // $old_category_ids = get_old_category_ids();
+            $selectedCategoryIds = explode(',', $entry->category_ids);
 
-        // $selectedCategoryIds = explode(',', $old_category_ids);
         foreach ($categories as $category) {
             $termId = $category->term_id;
 
-            // Check if the category term ID is not in the database
-            if (!in_array($termId, explode(',', $entry->category_ids))) {
+            // Check if the category term ID is not in the selected category IDs
+            if (!in_array($termId, $selectedCategoryIds)) {
                 // Check if the category is a top-level category (has no parent)
                 if ($category->parent == 0) {
                     ?>
@@ -35,6 +34,7 @@ function custom_color_changer_page()
         ?>
         </select>
         <br>
+
         <?php } ?>
 
         <label for="hue_rotate_values">Select Hue-Rotate Values:</label>
